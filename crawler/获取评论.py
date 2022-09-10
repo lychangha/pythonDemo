@@ -45,9 +45,9 @@ def getimage(html):
         imgUrl = "https:" + imgUrl
         print(imgUrl)
         req = requests.get(imgUrl, headers=headers)
-        if not (os.path.exists('./file/图片')):
-            os.mkdir('./file/图片')
-        with open("./file/图片/电脑" + str(i) + ".jpg", 'wb') as f:
+        if not (os.path.exists('../file/图片')):
+            os.mkdir('../file/图片')
+        with open("../file/图片/电脑" + str(i) + ".jpg", 'wb') as f:
             f.write(req.content)
         i += 1
 
